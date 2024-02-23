@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/admin_dialog_bg"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical">
+
+    <include
+        android:id="@+id/header_bottom_rounded"
+        layout="@layout/header_bottom_rounded"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/size_20"
+        android:layout_marginEnd="@dimen/size_20"
+        android:paddingTop="@dimen/size_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trip Name"
+            android:fontFamily="@font/muli_regular"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:minHeight="@dimen/size_45"
+            android:hint="Trip Name"
+            android:textSize="@dimen/text_size_16"
+            android:padding="@dimen/size_10"
+            android:background="@drawable/rounded_border_edit"
+            android:layout_marginTop="@dimen/size_10"
+            android:id="@+id/tripname"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sales_employee_mand"
+            android:id="@+id/sales_employee"
+            android:layout_marginTop="@dimen/size_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:fontFamily="@font/muli_regular"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:paddingRight="@dimen/size_10"
+            android:background="@drawable/rounded_border_edit">
+
+            <Spinner
+                android:id="@+id/sales_employee_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_45"
+                android:layout_toLeftOf="@id/drov_arrow"
+                android:background="@null"
+                android:dropDownWidth="wrap_content"
+                android:dropDownVerticalOffset="@dimen/text_45"
+                android:forceHasOverlappingRendering="false"
+                android:gravity="center_vertical|start"
+                android:paddingLeft="@dimen/size_5"
+                android:spinnerMode="dropdown"
+                android:textSize="@dimen/text_size_14" />
+            <ImageView
+                android:id="@+id/drov_arrow"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bottom_arrow_black"
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type of Expense"
+            android:id="@+id/expense_type"
+            android:layout_marginTop="@dimen/size_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:fontFamily="@font/muli_regular"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10"
+            android:paddingRight="@dimen/size_10"
+            android:background="@drawable/rounded_border_edit">
+
+            <Spinner
+                android:id="@+id/expense_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_45"
+                android:layout_toLeftOf="@id/drov_arrow1"
+                android:background="@null"
+                android:entries="@array/expense_type"
+                android:dropDownWidth="wrap_content"
+                android:dropDownVerticalOffset="@dimen/text_45"
+                android:forceHasOverlappingRendering="false"
+                android:gravity="center_vertical|start"
+                android:paddingLeft="@dimen/size_5"
+                android:spinnerMode="dropdown"
+                android:textSize="@dimen/text_size_14" />
+            <ImageView
+                android:id="@+id/drov_arrow1"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bottom_arrow_black"
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expense From Date"
+            android:fontFamily="@font/muli_regular"
+            android:layout_marginTop="@dimen/size_15"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="false"
+            android:drawableRight="@drawable/ic_calender"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="@dimen/size_5"
+            android:minHeight="@dimen/size_45"
+            android:hint="Expense From Date"
+            android:textSize="@dimen/text_size_16"
+            android:padding="@dimen/size_10"
+            android:background="@drawable/rounded_border_edit"
+            android:layout_marginTop="@dimen/size_10"
+            android:id="@+id/expense_from_date"/>
+
+
+
+        <TextView
+            android:fontFamily="@font/muli_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expense To Date"
+            android:layout_marginTop="@dimen/size_15"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:minHeight="@dimen/size_45"
+            android:hint="Expense To Date"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="false"
+            android:drawableRight="@drawable/ic_calender"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="@dimen/size_5"
+            android:textSize="@dimen/text_size_16"
+            android:padding="@dimen/size_10"
+            android:background="@drawable/rounded_border_edit"
+            android:layout_marginTop="@dimen/size_10"
+            android:id="@+id/expense_todate"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/size_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Amount"
+            android:fontFamily="@font/muli_regular"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:minHeight="@dimen/size_45"
+            android:hint="Total Amount"
+            android:inputType="number"
+            android:textSize="@dimen/text_size_16"
+            android:padding="@dimen/size_10"
+            android:background="@drawable/rounded_border_edit"
+            android:layout_marginTop="@dimen/size_10"
+            android:id="@+id/amount"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/size_15"
+            android:fontFamily="@font/muli_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remarks"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:minHeight="@dimen/size_100"
+            android:hint="Remarks"
+            android:gravity="start"
+            android:textSize="@dimen/text_size_16"
+            android:padding="@dimen/size_10"
+            android:background="@drawable/rounded_border_edit"
+            android:layout_marginTop="@dimen/size_10"
+            android:id="@+id/remarks"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45"
+            android:text="@string/attachment"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:fontFamily="@font/muli_bold"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_16"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:id="@+id/prevattachment"/>
+
+        <Button
+            android:layout_marginTop="@dimen/size_10"
+            android:visibility="visible"
+            android:id="@+id/attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/attachment"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="@dimen/size_20"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:backgroundTint="#4A79E4" />
+
+
+        <Button
+            android:layout_marginTop="@dimen/size_10"
+            android:visibility="visible"
+            android:id="@+id/create"
+            android:layout_width="@dimen/size_120"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/create"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="@dimen/size_20"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:backgroundTint="#4A79E4" />
+
+    </LinearLayout>
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loader"
+        layout="@layout/loader"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

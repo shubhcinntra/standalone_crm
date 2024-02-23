@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1073682311280",
+    "project_id": "standalone-56a94",
+    "storage_bucket": "standalone-56a94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073682311280:android:3809f7044722107ebdecb5",
+        "android_client_info": {
+          "package_name": "com.cinntra.standalone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073682311280-40qinpa5evfvms8e87eiscj7497d0vdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJWM7gfIG5AkQqo269zTYmU4nntoe_iF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073682311280-40qinpa5evfvms8e87eiscj7497d0vdd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
